@@ -5,8 +5,13 @@ include "newconfig.php";
 <html>
 
 <head>
-<b>Login Page</b>
-
+    
+<title>Student Login Form</title>
+	  <link rel="stylesheet" type="text/css" href="css styles/styles.css">
+	  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 <?php 
    
     $error_message = "";$success_message = "";
@@ -27,70 +32,59 @@ include "newconfig.php";
       if($count > 0){
           $_SESSION['uname'] = $uname;
           echo "hello logged in";
-          header("Location:../sane project/hello.php");
+          header("Location:../data/hello.php");
       }else{
-          echo "Invalid username and password";
+        echo '<script>alert("invalid username or password")</script>';
       }
     }
    else
    {
-       echo "please enter credentials";
+    echo '<script>alert("please enter credentials")</script>';
    }
     }
-    if(isset($_POST['submitadmin'])){
-        session_start();
-        $adminuname=mysqli_real_escape_string($con,$_POST['adminuser']);
-        $adminpassword=mysqli_real_escape_string($con,$_POST['adminpassword']);
-
-        if($adminuname!='' && $adminpassword!='')
-        {
-            $sql_query2="select count(*) as cntuser2 from admin where adminusername='".$adminuname."'and adminpassword='".$adminpassword."'";
-            $result2=mysqli_query($con,$sql_query2);
-            $row2=mysqli_fetch_array($result2);
-
-            $count2=$row2['cntuser2'];
-
-            if($count2>0)
-            {
-                $_SESSION['adminuname']=$adminuname;
-                echo'hello admin has logged in';
-                header("Location:../sane project/hello2admin.php");
-            }
-            else
-            {
-                echo "invalid admin details";
-            }
-        }
-    else
-    {
-        echo "please enter admin credentials";
-    }
-    }
-
+ 
 
 ?>
+
+
+  
+
 
 </head>
 
 <body>
 
 
-<form action='' method='post'>
-Username:
-<input name='username' type='text' placeholder='enter username'/><br>
- Password:
-<input name='password' type='password' placeholder='enter password'/><br>
-<button name='submit' type=value='submit'>submit</button>
-</form >
+<section class="wave">
+   <div class="logo">
+   <img src="images/logo-1.png" alt="rait">
+  <input type="submit" class="home" value="HOME" id="home"/>
 
-<form method='post' action=''>
-Admin username:
-<input name='adminuser' type='text' placeholder='enter adminusername'/><br>
-Admin password:
-<input name='adminpassword' type='password' placeholder='enter adminpassword'/><br>
-<button name='submitadmin' type=value='submitadmin'>submit</button>
+    </div>
+    <div class="logincontent">
+      
+      <div class="loginheading">
+          <h1>Login</h1>
+        </div>
 
-</form>
+        <form action='' method='post'>
+           
+    <input type="text" name="username" placeholder="Username / Email" id="username" size="15" />
+
+      <input type="password" name="password" placeholder="Password" id="password" size="15" />
+        <div class="loginremember">
+            <input type="checkbox" id="chbRemember" name="chbRemember" /><label class="check"
+                for="chbRemember"><h3>Remember me next time</h3></label>
+            <input name='submit' type="submit" class="loginbtn" value='submit' id="btnSubmit" />
+        </form> 
+         
+        </div>
+        <div class="pic-board">
+
+        </div>
+
+    </div>
+    </section>
 
 </body>
 

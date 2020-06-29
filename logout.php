@@ -2,6 +2,6 @@
 session_start();
 if(session_destroy())
 {
-    header("Location:../sane project/newlogin.php");
+    header("Location:../data/newlogin.php");
 }
 ?>
