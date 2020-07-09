@@ -29,7 +29,7 @@ include "newconfig.php";
                         {
                     $_SESSION['adminuname']=$adminuname;
                     echo'hello admin has logged in';
-                    header("Location:../data/hello2admin.php");
+                    header("Location:../data/Admin-Panel-master/dashboard.html");
                         }
                     else
                     {
@@ -57,7 +57,7 @@ include "newconfig.php";
 
     <div class="logincontent">
       <div class="loginheading">
-          <h1>   Login as Admin User</h1>
+          <h1>   Login </h1>
         </div>
         <div class="loginremember">
             <form action='' method='post'> 
@@ -67,7 +67,7 @@ include "newconfig.php";
           <label class="check" for="chbRemember"><h3>Remember me next time</h3></label>
           <input name='submitadmin' type="submit" class="loginbtn" value="Login" id="btnSubmit" />
            </form>
-           
+           <a href="../data/guestregistration.php">guest login</a>
         </div>
 
         <div class="pic-board">

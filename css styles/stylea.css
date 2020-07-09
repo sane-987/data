@@ -323,3 +323,7 @@ html, body
       margin-right: -100px;
       max-width: 100%;
    }
+   #registercolor
+   {
+     color:white;
+   }

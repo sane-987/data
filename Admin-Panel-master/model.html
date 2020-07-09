@@ -1,0 +1,125 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body{
+    background-image: url("$bgimg");
+}
+div#title {
+    position: absolute;
+	width:90%;
+	height:100%;
+	font-size:2.4em;
+    left:<?php  
+    if(isset($TicordX) && strlen($TicordX)>0)
+	{  echo htmlentities($TicordX);
+	}
+	else{ 
+	echo htmlentities(trim('9%',''));
+	} ?>;
+    top:<?php  
+    if(isset($TcordY) && strlen($TcordY)>0)
+	{  echo htmlentities($TcordY);
+	}
+	else{ 
+	echo htmlentities(trim('20%',''));
+	}
+    
+     ?>;
+    color:<?php echo htmlentities($titcol);?>;
+	
+}
+
+div#subtitle {
+    width:40%;
+	height:100%;
+	font-size:1.6em;
+	position: absolute;
+    left:<?php  
+    if(isset($STicordX) && strlen($STicordX)>0)
+	{      echo htmlentities($STicordX);
+	}
+	else{ 
+	echo htmlentities(trim('9%',''));
+	}?>;
+    top:<?php 
+    if(isset($STcordY) && strlen($STcordY)>0)
+	{      echo htmlentities($STcordY);
+	}
+	else{ 
+	echo htmlentities(trim('31%',''));
+	}
+
+	?>;
+	color:<?php echo htmlentities($subticol);?>;
+	font-family:cursive;
+}
+div#event1 {
+    width:90%;
+	height:100%;
+	font-size:1.4em;
+    position: absolute;
+    left:<?php
+	 if(isset($CcordX) && strlen($CcordX)>0)
+	{  echo htmlentities($CcordX);
+	}
+	else{ 
+	echo htmlentities(trim('6%',''));
+	}
+	?>;
+    top:<?php 
+    if(isset($CcordY) && strlen($CcordY)>0)
+	{  echo htmlentities($CcordY);
+	}
+	else{ 
+	echo htmlentities(trim('48%',''));
+	}
+	?>;
+   
+	color:<?php echo htmlentities($concol);?>;
+	
+}
+div#boh{
+	width: 28%;
+	position:absolute;
+	left:<?php if(isset($imgX) && strlen($imgX)>0 && (strlen($float))==0)
+	{ echo htmlentities( $imgX);
+	}
+	elseif(isset($float)  && (($float)==='center') && (strlen($imgX))==0 )
+	{echo htmlentities(trim('35%',''));	
+	}
+	elseif(isset($float)  && (($float)==='left') && (strlen($imgX))==0 )
+	{echo htmlentities(trim('9%',''));	
+	}
+	
+	?>;
+	top:<?php
+	if(isset($imgY) && strlen($imgY)>0)
+	{ echo htmlentities( $imgY);
+	}
+	else{ 
+	echo htmlentities(trim('31%',''));
+	}
+    ?>;
+} 
+
+
+
+</style>
+<body >
+	<div>
+   <div id = "title">
+        <p> <?php echo $title ?> </p>
+    </div>
+	  <div id = "subtitle">
+        <p> <?php echo $subtitle ?> </p>
+    </div>
+	
+    <div id = "event1">
+        <pre> <?php echo $basic."".$EventDetails1; ?> </pre>
+    </div>
+	<div id='boh'>
+<img src="naruto.jpg">
+</div>
+</div>
+
+</body>
