@@ -51,7 +51,7 @@ include "newconfig.php";
         <input name='guestlogin' type='submit' value='login'/>
     </form>
     <b>Register</b>
-    <a href="../data/guestregistration.php">signup page</a>
+    <a target='_blank' href="../data/guestregistration.php">signup page</a>
 
 
 </body>

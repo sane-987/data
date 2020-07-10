@@ -67,7 +67,7 @@ include "newconfig.php";
           <label class="check" for="chbRemember"><h3>Remember me next time</h3></label>
           <input name='submitadmin' type="submit" class="loginbtn" value="Login" id="btnSubmit" />
            </form>
-           <a target='_blank' href="../data/guestlogin.php">guest login</a>
+           <a  href="../data/guestlogin.php">guest login</a>
         </div>
 
         <div class="pic-board">
