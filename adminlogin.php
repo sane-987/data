@@ -33,12 +33,12 @@ include "newconfig.php";
                         }
                     else
                     {
-                    echo '<script>alert("invalid admin username or password")</script>';
+                    echo '<script>alert("invalid username or password")</script>';
                     }
                 }   
     else
     {
-        echo '<script>alert("please enter admin username and password")</script>';
+        echo '<script>alert("please enter username and password")</script>';
     }
 }
 
@@ -67,7 +67,7 @@ include "newconfig.php";
           <label class="check" for="chbRemember"><h3>Remember me next time</h3></label>
           <input name='submitadmin' type="submit" class="loginbtn" value="Login" id="btnSubmit" />
            </form>
-           <a href="../data/guestregistration.php">guest login</a>
+           <a target='_blank' href="../data/guestlogin.php">guest login</a>
         </div>
 
         <div class="pic-board">
